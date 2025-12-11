@@ -1,0 +1,14 @@
+# Exclude development and environment folders
+node_modules/**
+venv/**
+__pycache__/**
+*.pyc
+
+# Exclude test and sample files
+test.py
+sample.xls
+requirements.txt
+
+# Exclude git and config files
+.gitignore
+LICENSE.md
