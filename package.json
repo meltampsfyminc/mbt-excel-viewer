@@ -1,0 +1,38 @@
+{
+  "name": "mbt-excel-viewer",
+  "displayName": "Excel Viewer (Python Backend)",
+  "description": "View Excel files inside VSCode using Python + DataTables",
+  "version": "0.1.0",
+  "publisher": "melchor-tampus",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    
+  ],
+  "main": "./extension.js",
+  "contributes": {
+  "commands": [
+    {
+      "command": "excelViewer.openFile",
+      "title": "Excel Viewer: Open file"
+    }
+  ]
+},
+  "scripts": {
+    "compile": "echo \"No build step needed\"",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@vscode/test-electron": "^2.3.0"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/meltampsfyminc/mbt-excel-viewer.git"
+}
+
+}
