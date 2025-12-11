@@ -11,17 +11,26 @@
     "Other"
   ],
   "activationEvents": [
-    
+    "onCommand:excelViewer.openFile",
+    "workspaceContains:**/*.xls",
+    "workspaceContains:**/*.xlsx"
   ],
   "main": "./extension.js",
   "contributes": {
-  "commands": [
-    {
-      "command": "excelViewer.openFile",
-      "title": "Excel Viewer: Open file"
-    }
-  ]
-},
+    "commands": [
+      {
+        "command": "excelViewer.openFile",
+        "title": "Excel Viewer: Open Excel File"
+      }
+    ],
+    "languages": [
+      {
+        "id": "excel",
+        "extensions": [".xls", ".xlsx"],
+        "aliases": ["Excel"]
+      }
+    ]
+  },
   "scripts": {
     "compile": "echo \"No build step needed\"",
     "test": "node ./test/runTest.js"
@@ -31,8 +40,7 @@
     "@vscode/test-electron": "^2.3.0"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/meltampsfyminc/mbt-excel-viewer.git"
-}
-
+    "type": "git",
+    "url": "https://github.com/meltampsfyminc/mbt-excel-viewer.git"
+  }
 }
